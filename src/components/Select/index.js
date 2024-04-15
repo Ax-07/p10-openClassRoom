@@ -16,7 +16,7 @@ const Select = ({
   const [value, setValue] = useState();
   const [collapsed, setCollapsed] = useState(true);
   const changeValue = (newValue) => {
-    onChange();
+    onChange(newValue); // ajout de new value a la fonction onChange
     setValue(newValue);
     setCollapsed(newValue);
   };
@@ -50,7 +50,10 @@ const Select = ({
           )}
         </ul>
         <input type="hidden" value={value || ""} name={name} />
+        {/* ajout aria-label et id */}
         <button
+          aria-label="collapse-button"
+          id="collapse-button"
           type="button"
           data-testid="collapse-button-testid"
           className={collapsed ? "open" : "close"}

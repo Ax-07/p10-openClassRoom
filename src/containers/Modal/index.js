@@ -12,7 +12,9 @@ const Modal = ({ opened, Content, children }) => {
         <div className="modal">
           <div className="content">
             {Content}
+            {/* ajout aria-label */}
             <button
+              aria-label="close-modal"
               type="button"
               data-testid="close-modal"
               onClick={() => setIsOpened(false)}
