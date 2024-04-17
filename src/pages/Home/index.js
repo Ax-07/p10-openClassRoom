@@ -67,12 +67,12 @@ const Page = () => {
       </section>
       <section id="nos-realisations" className="EventsContainer">
         <h2 className="Title">Nos réalisations</h2>
-        <EventList />
+        <EventList/>
       </section>
       <section id="notre-equipe" className="PeoplesContainer">
         <h2 className="Title">Notre équipe</h2>
         <p>Une équipe d’experts dédiés à l’ogranisation de vos événements</p>
-        <div className="ListContainer">
+        <div className="ListContainer" data-testid="people-list-testid">
           <PeopleCard
             imageSrc="/images/stephanie-liverani-Zz5LQe-VSMY-unsplash.png"
             name="Samira"
@@ -127,8 +127,8 @@ const Page = () => {
         </Modal>
       </div>
     </main>
-    <footer className="row">
-      <div className="col presta">
+    <footer className="row" data-testid="footer-testid">
+      <div className="col presta" data-testid="last-event-testid">
         <h3>Notre derniére prestation</h3>
           {lastEvent && <EventCard
           imageSrc={lastEvent.cover}
@@ -136,6 +136,7 @@ const Page = () => {
           date={new Date(lastEvent.date)}
           small
           label="boom"
+          
         />}
       </div>
       <div className="col contact">
