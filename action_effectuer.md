@@ -27,3 +27,18 @@
     - j'ai modifier le timeOut de la promesse de mockContactApi
 # !!! findByText a un timeOut de 1000ms !!!
     - et chatgpt ou copilote me l'a pas dit!!!!! putain d'IA de merde!!!! 
+
+
+## Test optionnel
+### Home
+### 1. test si la liste d'event est présente a la création de la page.
+    - render(<Home />); est necessaire pour permettre a testing library d'acceder à l'arborescence du rendu.
+    - j'ai ajouter l'attribut "data-testid" dans la div "listContainer" du fichier Events/index avec comme valeur "event-list-testid".
+    - const events = screen.getByTestId("event-list-testid"); recupere l'attribut de listcontainer.
+    - expect(events).toBeInTheDocument(); vérifie si "listcontainer" est present dans la page Home.
+### 2. test si la liste d'event est présente a la création de la page.
+
+### Icon
+- c'est le meme test que celui de twitch, mais il falait ajouter data-testid="icon" à l'icon facebook
+### Date
+-on recupere la fonction getmonth(), on creer la date qui est rechercher, puis on utilise getmonth dans expect et on vérifie que le mois correspond.
