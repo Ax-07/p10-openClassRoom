@@ -22,11 +22,9 @@
     - le filtre ne prennait pas en compte le type d'event, j'ai ajouter "setFilteredEvents" qui filtre les events par type.
 ## Form
 ### probleme onSuccess
-    - j'ai ajouter onSuccess() apres setSendin(false) sinon il n'est jamais appelé et le test veut le vérifier.
+    - j'ai ajouter onSuccess() apres setSending(false) sinon il n'est jamais appelé et le test veut le vérifier.
 ### probleme test "await screen.findByText("Envoyer");"
-    - j'ai modifier le timeOut de la promesse de mockContactApi
-# !!! findByText a un timeOut de 1000ms !!!
-    - et chatgpt ou copilote me l'a pas dit!!!!! putain d'IA de merde!!!! 
+    - j'ai modifier le timeOut de la promesse de mockContactApi. screen.findByText à un timeout de 1000ms
 
 
 ## Test optionnel
